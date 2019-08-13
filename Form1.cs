@@ -226,17 +226,26 @@ namespace UP主抓包神器
             }
             
             public void processRequest(IRequest request,IResponse response) {
-                StringBuilder sbuidler = new StringBuilder();
+                
                 if (request.Method == "POST")
                 {
-                    sbuidler.Append("POST ").Append(request.Url).AppendLine().Append(" Post Data:").AppendLine();
+                    string method = "POST";
+                    string url = request.Url;
+                    StringBuilder postdata = new StringBuilder();
+                    
                     foreach (IPostDataElement elm in request.PostData.Elements) {
                         if (elm.Type != PostDataElementType.File) {
-                            sbuidler.Append(elm.GetBody()).AppendLine();
+                            postdata.Append(elm.GetBody()).AppendLine();
                         }
                     }
+
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append("提交方法:\"").Append(method).Append("\" ");
+                    sb.Append("\r\n提交URL:\"").Append(url).Append("\" ");
+                    sb.Append("\r\n提交内容:"+escapeText(postdata.ToString()));
+
                     CaputreEventArgs captures = new CaputreEventArgs();
-                    captures.content = sbuidler.ToString();
+                    captures.content = sb.ToString();
                     captures.domain = getDomain(request.Url);
 
                     if (null != OnCaptureResult) {
@@ -245,17 +254,43 @@ namespace UP主抓包神器
                 }
                 else if (request.Method == "GET" && request.Url.Contains('?') && request.Url.Contains('='))
                 {
-                    sbuidler.Append("GET  ").Append(request.Url);
+                    string method = "GET";
+                    string url = request.Url;
+
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append("提交方法:\"").Append(method) .Append("\" ");
+                    sb.Append("\r\n提交URL:\"").Append(url).Append("\" ");
+                    sb.Append("\r\n提交内容:\"\"");
+
                     CaputreEventArgs captures = new CaputreEventArgs();
-                    captures.content = sbuidler.ToString();
                     captures.domain = getDomain(request.Url);
+                    captures.content = sb.ToString();
                     if (null != OnCaptureResult)
                     {
                         mInvoker.Invoke(OnCaptureResult, request, captures);
                     }
                 }
             }
-
+            private string escapeText(string src)
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.Append("\"");
+                foreach (char chr in src.ToCharArray())
+                {
+                    if ("\\\"".Contains(chr))
+                    {
+                        sb.Append('\\');
+                    }
+                    if (chr == '\r') { sb.Append("\\r"); }
+                    else if (chr == '\n')
+                    { sb.Append("\\n"); }
+                    else
+                    {
+                        sb.Append(chr);
+                    }
+                }
+                return sb.Append("\"").ToString();
+            }
             private string getDomain(String url) {
                 if (url.Contains("://")) {
                     string[] host1 = url.Split(new string[] { "://" }, StringSplitOptions.RemoveEmptyEntries);

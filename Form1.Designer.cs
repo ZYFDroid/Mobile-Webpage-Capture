@@ -49,23 +49,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtCurrentAddress = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.chkUsesCapture = new System.Windows.Forms.CheckBox();
-            this.txtAddressRecord = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.listPost = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtPostDetail = new System.Windows.Forms.TextBox();
-            this.btnClearPost = new System.Windows.Forms.Button();
-            this.txtFilterHost = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtFilterHost = new System.Windows.Forms.TextBox();
+            this.btnClearPost = new System.Windows.Forms.Button();
+            this.txtPostDetail = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.listPost = new System.Windows.Forms.ListBox();
+            this.chkUsesCapture = new System.Windows.Forms.CheckBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtAddressRecord = new System.Windows.Forms.TextBox();
             this.mainPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -277,38 +277,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "　　简易抓包";
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.txtAddressRecord);
-            this.groupBox4.Location = new System.Drawing.Point(6, 18);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(399, 152);
-            this.groupBox4.TabIndex = 0;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "地址记录:";
-            // 
-            // chkUsesCapture
-            // 
-            this.chkUsesCapture.AutoSize = true;
-            this.chkUsesCapture.Location = new System.Drawing.Point(13, 0);
-            this.chkUsesCapture.Name = "chkUsesCapture";
-            this.chkUsesCapture.Size = new System.Drawing.Size(15, 14);
-            this.chkUsesCapture.TabIndex = 1;
-            this.chkUsesCapture.UseVisualStyleBackColor = true;
-            // 
-            // txtAddressRecord
-            // 
-            this.txtAddressRecord.BackColor = System.Drawing.Color.Black;
-            this.txtAddressRecord.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAddressRecord.ForeColor = System.Drawing.Color.Lime;
-            this.txtAddressRecord.Location = new System.Drawing.Point(8, 16);
-            this.txtAddressRecord.Multiline = true;
-            this.txtAddressRecord.Name = "txtAddressRecord";
-            this.txtAddressRecord.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtAddressRecord.Size = new System.Drawing.Size(384, 126);
-            this.txtAddressRecord.TabIndex = 0;
-            this.txtAddressRecord.WordWrap = false;
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.label5);
@@ -325,54 +293,14 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "请求抓包";
             // 
-            // listPost
+            // label5
             // 
-            this.listPost.FormattingEnabled = true;
-            this.listPost.ItemHeight = 12;
-            this.listPost.Location = new System.Drawing.Point(8, 54);
-            this.listPost.Name = "listPost";
-            this.listPost.Size = new System.Drawing.Size(383, 148);
-            this.listPost.TabIndex = 0;
-            this.listPost.SelectedIndexChanged += new System.EventHandler(this.listPost_SelectedIndexChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 12);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "请求列表:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 210);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 12);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "内容:";
-            // 
-            // txtPostDetail
-            // 
-            this.txtPostDetail.Location = new System.Drawing.Point(8, 231);
-            this.txtPostDetail.Multiline = true;
-            this.txtPostDetail.Name = "txtPostDetail";
-            this.txtPostDetail.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtPostDetail.Size = new System.Drawing.Size(383, 65);
-            this.txtPostDetail.TabIndex = 2;
-            // 
-            // btnClearPost
-            // 
-            this.btnClearPost.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClearPost.Location = new System.Drawing.Point(312, 205);
-            this.btnClearPost.Margin = new System.Windows.Forms.Padding(1);
-            this.btnClearPost.Name = "btnClearPost";
-            this.btnClearPost.Size = new System.Drawing.Size(79, 23);
-            this.btnClearPost.TabIndex = 3;
-            this.btnClearPost.Text = "清空列表";
-            this.btnClearPost.UseVisualStyleBackColor = true;
-            this.btnClearPost.Click += new System.EventHandler(this.btnClearPost_Click);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 37);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(143, 12);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "排除域名(英文逗号分割):";
             // 
             // txtFilterHost
             // 
@@ -385,14 +313,87 @@
             this.txtFilterHost.Text = "qq.com,cnzz.com";
             this.txtFilterHost.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // label5
+            // btnClearPost
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 37);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 12);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "排除域名(英文逗号分割):";
+            this.btnClearPost.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClearPost.Location = new System.Drawing.Point(312, 182);
+            this.btnClearPost.Margin = new System.Windows.Forms.Padding(1);
+            this.btnClearPost.Name = "btnClearPost";
+            this.btnClearPost.Size = new System.Drawing.Size(79, 23);
+            this.btnClearPost.TabIndex = 3;
+            this.btnClearPost.Text = "清空列表";
+            this.btnClearPost.UseVisualStyleBackColor = true;
+            this.btnClearPost.Click += new System.EventHandler(this.btnClearPost_Click);
+            // 
+            // txtPostDetail
+            // 
+            this.txtPostDetail.Location = new System.Drawing.Point(8, 209);
+            this.txtPostDetail.Multiline = true;
+            this.txtPostDetail.Name = "txtPostDetail";
+            this.txtPostDetail.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtPostDetail.Size = new System.Drawing.Size(383, 87);
+            this.txtPostDetail.TabIndex = 2;
+            this.txtPostDetail.WordWrap = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 189);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(185, 12);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "抓包内容/BomberStudio游戏目标:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 12);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "请求列表:";
+            // 
+            // listPost
+            // 
+            this.listPost.FormattingEnabled = true;
+            this.listPost.ItemHeight = 12;
+            this.listPost.Location = new System.Drawing.Point(8, 54);
+            this.listPost.Name = "listPost";
+            this.listPost.Size = new System.Drawing.Size(383, 124);
+            this.listPost.TabIndex = 0;
+            this.listPost.SelectedIndexChanged += new System.EventHandler(this.listPost_SelectedIndexChanged);
+            // 
+            // chkUsesCapture
+            // 
+            this.chkUsesCapture.AutoSize = true;
+            this.chkUsesCapture.Location = new System.Drawing.Point(13, 0);
+            this.chkUsesCapture.Name = "chkUsesCapture";
+            this.chkUsesCapture.Size = new System.Drawing.Size(15, 14);
+            this.chkUsesCapture.TabIndex = 1;
+            this.chkUsesCapture.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.txtAddressRecord);
+            this.groupBox4.Location = new System.Drawing.Point(6, 18);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(399, 152);
+            this.groupBox4.TabIndex = 0;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "地址记录:";
+            // 
+            // txtAddressRecord
+            // 
+            this.txtAddressRecord.BackColor = System.Drawing.Color.Black;
+            this.txtAddressRecord.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAddressRecord.ForeColor = System.Drawing.Color.Lime;
+            this.txtAddressRecord.Location = new System.Drawing.Point(8, 16);
+            this.txtAddressRecord.Multiline = true;
+            this.txtAddressRecord.Name = "txtAddressRecord";
+            this.txtAddressRecord.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtAddressRecord.Size = new System.Drawing.Size(384, 126);
+            this.txtAddressRecord.TabIndex = 0;
+            this.txtAddressRecord.WordWrap = false;
             // 
             // Form1
             // 
@@ -415,10 +416,10 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
