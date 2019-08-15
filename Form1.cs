@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using CefSharp;
 using System.Security.Cryptography.X509Certificates;
 using CefSharp.Handler;
+using System.IO;
 
 namespace UP主抓包神器
 {
@@ -235,7 +236,8 @@ namespace UP主抓包神器
                     
                     foreach (IPostDataElement elm in request.PostData.Elements) {
                         if (elm.Type != PostDataElementType.File) {
-                            postdata.Append(elm.GetBody()).AppendLine();
+                            if (postdata.Length > 0) { postdata.AppendLine(); }
+                            postdata.Append(elm.GetBody());
                         }
                     }
 
@@ -322,6 +324,17 @@ namespace UP主抓包神器
         private void listPost_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtPostDetail.Text = listPost.SelectedItem?.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (File.Exists("截图扫码.exe"))
+            {
+                System.Diagnostics.Process.Start("截图扫码.exe");
+            }
+            else {
+                MessageBox.Show("未安装插件");
+            }
         }
     }
 }
