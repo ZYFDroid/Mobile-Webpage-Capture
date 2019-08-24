@@ -60,7 +60,6 @@
             this.chkUsesCapture = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtAddressRecord = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -135,7 +134,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnDevTools);
             this.groupBox1.Controls.Add(this.btnStop);
             this.groupBox1.Controls.Add(this.btnRefresh);
@@ -152,9 +150,9 @@
             // 
             // btnDevTools
             // 
-            this.btnDevTools.Location = new System.Drawing.Point(219, 47);
+            this.btnDevTools.Location = new System.Drawing.Point(290, 47);
             this.btnDevTools.Name = "btnDevTools";
-            this.btnDevTools.Size = new System.Drawing.Size(114, 24);
+            this.btnDevTools.Size = new System.Drawing.Size(115, 24);
             this.btnDevTools.TabIndex = 2;
             this.btnDevTools.Text = "F12原生抓包";
             this.btnDevTools.UseVisualStyleBackColor = true;
@@ -162,9 +160,9 @@
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(165, 47);
+            this.btnStop.Location = new System.Drawing.Point(218, 47);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(49, 24);
+            this.btnStop.Size = new System.Drawing.Size(66, 24);
             this.btnStop.TabIndex = 2;
             this.btnStop.Text = "停止";
             this.btnStop.UseVisualStyleBackColor = true;
@@ -172,9 +170,9 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(115, 47);
+            this.btnRefresh.Location = new System.Drawing.Point(150, 47);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(45, 24);
+            this.btnRefresh.Size = new System.Drawing.Size(62, 24);
             this.btnRefresh.TabIndex = 2;
             this.btnRefresh.Text = "刷新";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -182,9 +180,9 @@
             // 
             // btnForward
             // 
-            this.btnForward.Location = new System.Drawing.Point(62, 47);
+            this.btnForward.Location = new System.Drawing.Point(80, 47);
             this.btnForward.Name = "btnForward";
-            this.btnForward.Size = new System.Drawing.Size(47, 24);
+            this.btnForward.Size = new System.Drawing.Size(64, 24);
             this.btnForward.TabIndex = 2;
             this.btnForward.Text = "前进";
             this.btnForward.UseVisualStyleBackColor = true;
@@ -192,9 +190,9 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(10, 47);
+            this.btnBack.Location = new System.Drawing.Point(11, 47);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(46, 24);
+            this.btnBack.Size = new System.Drawing.Size(63, 24);
             this.btnBack.TabIndex = 2;
             this.btnBack.Text = "后退";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -397,16 +395,6 @@
             this.txtAddressRecord.TabIndex = 0;
             this.txtAddressRecord.WordWrap = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(339, 47);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(66, 24);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "截屏扫码";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -419,7 +407,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "UP主抓包神器";
+            this.Text = "抓包神器";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.mainPanel.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -469,7 +457,6 @@
         private System.Windows.Forms.Button btnClearPost;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtFilterHost;
-        private System.Windows.Forms.Button button1;
     }
 }
 
